@@ -9,5 +9,6 @@ const Size = {
 // semantic
 export const FontSize = {
   Body: Size.M,
-  H1: Size.XL
+  LogoSmall: Size.M,
+  LogoLarge: Size.XL
 } as const

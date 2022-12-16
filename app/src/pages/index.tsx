@@ -4,12 +4,13 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 import { BackgroundColor, FontSize, TextColor } from '~/token'
+import { TextLogo, Size } from '~/component/atom/logo/TextLogo'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>goldfish</title>
         <meta name="description" content="我が家の金魚を紹介するだけのサイト" />
@@ -17,13 +18,15 @@ export default function Home() {
       </Head>
 
       <Header>
-        <Logo>Goldfish</Logo>
+        <TextLogo />
       </Header>
 
       <Main>
         <FirstViewContent>
           <TitleContainer>
-            <Title>Goldfish</Title>
+            <Title>
+              <TextLogo size={Size.Large} />
+            </Title>
             <p>我が家の金魚を紹介するだけのサイト</p>
           </TitleContainer>
         </FirstViewContent>
@@ -117,7 +120,7 @@ export default function Home() {
       <Footer>
         <small>&copy; 2022 Goldfish</small>
       </Footer>
-    </div>
+    </>
   )
 }
 
@@ -133,11 +136,6 @@ const Header = styled.header`
   padding: 20px;
   color: ${TextColor.Header};
   background-color: ${BackgroundColor.Header};
-`
-
-const Logo = styled.div`
-  font-weight: bold;
-  letter-spacing: 0.1rem;
 `
 
 const Content = styled.article`
@@ -161,8 +159,6 @@ const TitleContainer = styled.div`
 
 const Title = styled.h1`
   color: ${TextColor.H1};
-  font-size: ${FontSize.H1};
-  letter-spacing: 0.1rem;
 `
 
 const Footer = styled.footer`
