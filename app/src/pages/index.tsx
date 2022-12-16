@@ -3,7 +3,7 @@ import Head from 'next/head'
 // import { Inter } from '@next/font/google'
 import styled from 'styled-components'
 
-import { BackgroundColor, FontSize, TextColor } from '~/token'
+import { BackgroundColor, TextColor } from '~/token'
 import { TextLogo, Size } from '~/component/atom/logo/TextLogo'
 
 // const inter = Inter({ subsets: ['latin'] })
