@@ -2,18 +2,18 @@ import styled from 'styled-components'
 
 import { FontSize } from '~/token'
 
-export const Size = {
+export const LogoSize = {
   Small: FontSize.LogoSmall,
   Large: FontSize.LogoLarge
 } as const
-type SizeType = typeof Size[keyof typeof Size]
+type LogoSizeType = typeof LogoSize[keyof typeof LogoSize]
 
 interface Props {
-  size?: SizeType
+  size?: LogoSizeType
   className?: string
 }
 
-export const TextLogo = ({ size = Size.Small, className }: Props) => {
+export const Logo = ({ size = LogoSize.Small, className }: Props) => {
   return (
     <Container size={size} className={className}>
       Goldfish
@@ -21,7 +21,7 @@ export const TextLogo = ({ size = Size.Small, className }: Props) => {
   )
 }
 
-const Container = styled.div<{ size: SizeType }>`
+const Container = styled.div<{ size: LogoSizeType }>`
   font-size: ${({ size }) => size};
   font-weight: bold;
   letter-spacing: 0.1rem;

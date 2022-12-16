@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 import { BackgroundColor, TextColor } from '~/token'
-import { TextLogo, Size } from '~/component/atom/logo/TextLogo'
+import { Logo, LogoSize } from '~/component/atom/Logo'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -18,14 +18,14 @@ export default function Home() {
       </Head>
 
       <Header>
-        <TextLogo />
+        <Logo />
       </Header>
 
       <Main>
         <FirstViewContent>
           <TitleContainer>
             <Title>
-              <TextLogo size={Size.Large} />
+              <Logo size={LogoSize.Large} />
             </Title>
             <p>我が家の金魚を紹介するだけのサイト</p>
           </TitleContainer>
