@@ -14,7 +14,6 @@ export const TextColor = {
   Header: Gray[200],
   Footer: Gray[200],
   Link: Gray[600],
-  H1: Gray[600]
 } as const
 
 export const BackgroundColor = {
@@ -23,4 +22,8 @@ export const BackgroundColor = {
   Header: Gray[600],
   Footer: Gray[600],
   Img: Gray[400]
+} as const
+
+export const BorderColor = {
+  Card: Gray[400]
 } as const

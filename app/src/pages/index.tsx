@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import { BackgroundColor, TextColor } from '~/token'
 import { Logo, LogoSize } from '~/component/atom/Logo'
+import { MemberList } from '~/component/organism/list/MemberList'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -18,20 +19,23 @@ export default function Home() {
       </Head>
 
       <Header>
-        <Logo />
+        <h1>
+          <Logo />
+        </h1>
       </Header>
 
       <Main>
         <FirstViewContent>
-          <TitleContainer>
-            <Title>
-              <Logo size={LogoSize.Large} />
-            </Title>
+          <Title>
+            <Logo size={LogoSize.Large} />
             <p>我が家の金魚を紹介するだけのサイト</p>
-          </TitleContainer>
+          </Title>
         </FirstViewContent>
 
-        <Content>TODO: Content</Content>
+        <Content>
+          <MemberList />
+        </Content>
+
         <Content>TODO: Content</Content>
         <Content>TODO: Content</Content>
 
@@ -150,15 +154,11 @@ const FirstViewContent = styled(Content)`
   background-color: ${BackgroundColor.Img};
 `
 
-const TitleContainer = styled.div`
+const Title = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
   line-height: 1.3;
-`
-
-const Title = styled.h1`
-  color: ${TextColor.H1};
 `
 
 const Footer = styled.footer`
