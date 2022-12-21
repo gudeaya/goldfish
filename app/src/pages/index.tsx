@@ -6,12 +6,13 @@ import styled from 'styled-components'
 import { BackgroundColor, TextColor } from '~/token'
 import { Logo, LogoSize } from '~/component/atom/Logo'
 import { MemberList } from '~/component/organism/list/MemberList'
+import { MODAL_DIALOG_LAYER_ID } from '~/constant'
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
+    <Container>
       <Head>
         <title>goldfish</title>
         <meta name="description" content="我が家の金魚を紹介するだけのサイト" />
@@ -24,7 +25,7 @@ export default function Home() {
         </h1>
       </Header>
 
-      <Main>
+      <main>
         <FirstViewContent>
           <Title>
             <Logo size={LogoSize.Large} />
@@ -119,19 +120,26 @@ export default function Home() {
             <p className={inter.className}>Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel.</p>
           </a>
         </div> */}
-      </Main>
+      </main>
 
       <Footer>
         <small>&copy; 2022 Goldfish</small>
       </Footer>
-    </>
+
+      <ModalDialogLayer id={MODAL_DIALOG_LAYER_ID} />
+    </Container>
   )
 }
 
-const Main = styled.main`
-  color: ${TextColor.Main};
-  background-color: ${BackgroundColor.Main};
+const Container = styled.div`
+  height: 100vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
+
 const Header = styled.header`
   position: fixed;
   top: 0;
@@ -140,6 +148,7 @@ const Header = styled.header`
   padding: 20px;
   color: ${TextColor.Header};
   background-color: ${BackgroundColor.Header};
+  z-index: 1000;
 `
 
 const Content = styled.article`
@@ -165,4 +174,10 @@ const Footer = styled.footer`
   padding: 20px;
   color: ${TextColor.Footer};
   background-color: ${BackgroundColor.Footer};
+  z-index: 1000;
+`
+
+const ModalDialogLayer = styled.aside`
+  position: fixed;
+  z-index: 10000;
 `

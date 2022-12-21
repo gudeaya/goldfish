@@ -9,16 +9,14 @@ const Gray = {
 
 // semantic
 export const TextColor = {
-  Body: Gray[200],
-  Main: Gray[800],
+  Body: Gray[800],
   Header: Gray[200],
   Footer: Gray[200],
   Link: Gray[600],
 } as const
 
 export const BackgroundColor = {
-  Body: Gray[600],
-  Main: Gray[200],
+  Body: Gray[200],
   Header: Gray[600],
   Footer: Gray[600],
   Img: Gray[400]

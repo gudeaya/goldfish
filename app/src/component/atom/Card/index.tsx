@@ -6,11 +6,12 @@ interface Props {
   children: React.ReactNode
   name?: string
   className?: string
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void
 }
 
-export const Card = ({ children, name, className }: Props) => {
+export const Card = ({ children, name, className, onClick }: Props) => {
   return (
-    <Container className={className}>
+    <Container className={className} onClick={onClick}>
       {name && <Name>{name}</Name>}
       {children}
     </Container>
