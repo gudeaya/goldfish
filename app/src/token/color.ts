@@ -12,6 +12,7 @@ export const TextColor = {
   Body: Gray[800],
   Header: Gray[200],
   Footer: Gray[200],
+  FooterLink: Gray[200],
   Link: Gray[600],
 } as const
 

@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { FaGithub } from 'react-icons/fa'
+
 // import Image from 'next/image'
 // import { Inter } from '@next/font/google'
 import styled from 'styled-components'
@@ -123,6 +125,13 @@ export default function Home() {
       </main>
 
       <Footer>
+        <FooterInfo>
+          <FooterLink href={'https://github.com/gudeaya/goldfish'} target={'_blank'}>
+            <FaGithub size={20} />
+            <span>GitHub</span>
+          </FooterLink>
+        </FooterInfo>
+
         <small>&copy; 2022 Goldfish</small>
       </Footer>
 
@@ -171,10 +180,31 @@ const Title = styled.div`
 `
 
 const Footer = styled.footer`
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 10px;
+  gap: 20px;
   color: ${TextColor.Footer};
   background-color: ${BackgroundColor.Footer};
   z-index: 1000;
+`
+
+const FooterInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`
+
+const FooterLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: ${TextColor.FooterLink};
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 const ModalDialogLayer = styled.aside`
