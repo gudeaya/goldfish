@@ -12,6 +12,8 @@ lint:
 lint.fix:
 	docker compose exec app npm run lint:fix
 
+package.ci:
+	docker compose run --rm app npm ci
 package.install:
 	docker compose run --rm app npm install
 
