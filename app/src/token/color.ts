@@ -1,4 +1,6 @@
 // primitive
+type PrimitiveValue = typeof Gray[keyof typeof Gray] | typeof Orange[keyof typeof Orange] | typeof Blue[keyof typeof Blue]
+
 const Gray = {
   1000: '#222',
   800: '#333',
@@ -26,7 +28,6 @@ const Blue = {
   [key: number]: string
 }
 
-
 // semantic
 export const TextColor = {
   Body: Gray[800],
@@ -35,7 +36,9 @@ export const TextColor = {
   Link: Orange[600],
   LinkFooter: Orange[200],
   Definition: Orange[800],
-} as const
+} as const satisfies {
+  [key: string]: PrimitiveValue
+}
 
 export const BackgroundColor = {
   Body: Gray[200],
@@ -43,4 +46,6 @@ export const BackgroundColor = {
   Footer: Gray[600],
   Img: Gray[400],
   Card: Blue[200]
-} as const
+} as const satisfies {
+  [key: string]: PrimitiveValue
+}
