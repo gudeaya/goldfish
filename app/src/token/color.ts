@@ -14,6 +14,7 @@ export const TextColor = {
   Footer: Gray[200],
   FooterLink: Gray[200],
   Link: Gray[600],
+  Definition: Gray[600],
 } as const
 
 export const BackgroundColor = {

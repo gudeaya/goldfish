@@ -39,9 +39,6 @@ export default function Home() {
           <MemberList />
         </Content>
 
-        <Content>TODO: Content</Content>
-        <Content>TODO: Content</Content>
-
         {/* <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
