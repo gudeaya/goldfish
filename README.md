@@ -1,33 +1,33 @@
 # goldfish
 
-# Local 開発
+## Local 開発
 
-## 環境構築
-
-```
-docker compose build
-```
-
-## 起動
+### 環境構築
 
 ```
-docker compose up
+make build
 ```
 
-## 停止
+### 起動
 
 ```
-docker compose down
+make run
 ```
 
-## lint check
+### 停止
 
 ```
-docker compose exec app npm run lint
+make down
 ```
 
-## lint fix
+### lint check
 
 ```
-docker compose exec app npm run lint:fix
+make lint
+```
+
+### lint fix
+
+```
+make lint.fix
 ```
