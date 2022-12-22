@@ -197,7 +197,7 @@ const FooterLink = styled.a`
   display: flex;
   align-items: center;
   gap: 4px;
-  color: ${TextColor.FooterLink};
+  color: ${TextColor.LinkFooter};
 
   &:hover {
     text-decoration: underline;
