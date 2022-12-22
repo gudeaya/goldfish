@@ -17,8 +17,9 @@ export default function Home() {
     <Container>
       <Head>
         <title>goldfish</title>
-        <meta name="description" content="我が家の金魚を紹介するだけのサイト" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name={'viewport'} content={'width=device-width,initial-scale=1.0'} />
+        <meta name={'description'} content={'我が家の金魚を紹介するだけのサイト'} />
+        <link rel={'icon'} href={'/favicon.ico'} />
       </Head>
 
       <Header>

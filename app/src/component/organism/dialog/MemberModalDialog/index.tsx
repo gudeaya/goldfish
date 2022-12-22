@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styled from 'styled-components'
 
 import { BackgroundColor } from '~/token'
@@ -16,7 +17,15 @@ export const MemberModalDialog = ({ isOpen, className, onClose }: Props) => {
       <Fade isOpen={isOpen}>
         <Container className={className}>
           <Mask onClick={onClose} />
-          <Content>TODO: Content</Content>
+          <Content>
+            <Image
+              src={'/member/sample.jpg'}
+              alt={'sample'}
+              width={1599}
+              height={1066}
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </Content>
         </Container>
       </Fade>
     </ModalDialogPortal>
@@ -49,7 +58,17 @@ const Mask = styled.div`
 `
 
 const Content = styled.div`
+  max-width: 90vw;
+  max-height: 90vh;
   padding: 20px;
   background-color: ${BackgroundColor.Body};
+  border-radius: 2px;
+`
+
+const Img = styled.div`
+  max-width: 100%;
+  width: auto;
+  padding: 20px;
+  background-color: ${BackgroundColor.Img};
   border-radius: 2px;
 `
