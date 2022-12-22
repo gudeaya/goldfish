@@ -5,7 +5,7 @@ const Gray = {
   1000: '#222',
   800: '#333',
   600: '#444',
-  400: '#ccc',
+  400: '#ebebeb',
   200: '#f7f7f7',
 } as const satisfies {
   [key: number]: string
@@ -44,8 +44,10 @@ export const BackgroundColor = {
   Body: Gray[200],
   Header: Orange[600],
   Footer: Gray[600],
-  Img: Gray[400],
-  Card: Blue[200]
+  Img: Gray[200],
+  Card: Gray[400],
+  GradationLeft: Blue[200],
+  GradationRight: Orange[200],
 } as const satisfies {
   [key: string]: PrimitiveValue
 }
