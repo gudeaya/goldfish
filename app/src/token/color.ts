@@ -1,12 +1,15 @@
 // primitive
-type PrimitiveValue = typeof Gray[keyof typeof Gray] | typeof Orange[keyof typeof Orange] | typeof Blue[keyof typeof Blue]
+type PrimitiveValue =
+  | typeof Gray[keyof typeof Gray]
+  | typeof Orange[keyof typeof Orange]
+  | typeof Blue[keyof typeof Blue]
 
 const Gray = {
   1000: '#222',
   800: '#333',
   600: '#444',
   400: '#ebebeb',
-  200: '#f7f7f7',
+  200: '#f7f7f7'
 } as const satisfies {
   [key: number]: string
 }
@@ -35,7 +38,7 @@ export const TextColor = {
   Footer: Gray[200],
   Link: Orange[600],
   LinkFooter: Orange[200],
-  Definition: Orange[800],
+  Definition: Orange[800]
 } as const satisfies {
   [key: string]: PrimitiveValue
 }
@@ -44,10 +47,15 @@ export const BackgroundColor = {
   Body: Gray[200],
   Header: Orange[600],
   Footer: Gray[600],
-  Img: Gray[200],
   Card: Gray[400],
-  GradationLeft: Blue[200],
-  GradationRight: Orange[200],
+  FirstViewLeft: Blue[200],
+  FirstViewRight: Orange[200]
+} as const satisfies {
+  [key: string]: PrimitiveValue
+}
+
+export const BorderColor = {
+  Card: Gray[200]
 } as const satisfies {
   [key: string]: PrimitiveValue
 }

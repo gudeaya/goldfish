@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import { useCallback, useMemo, useState } from 'react'
 import styled from 'styled-components'
 
-import { BackgroundColor, TextColor } from '~/token'
+import { BorderColor, TextColor } from '~/token'
 import { Card } from '~/component/atom/Card'
 import { MemberModalDialog } from '~/component/organism/dialog/MemberModalDialog'
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export interface Member {
+  key: string
   name: string
   nicknames: string[]
   descriptions: string[]
@@ -26,6 +28,10 @@ export const MemberCard = ({ member, className }: Props) => {
     return `${member.name}（${nicknames}）`
   }, [member])
 
+  const src = useMemo(() => {
+    return `/member/${member.key}.jpg`
+  }, [member.key])
+
   const handleContainerClick = useCallback(() => {
     setIsOpenModalDialog(true)
   }, [])
@@ -38,7 +44,15 @@ export const MemberCard = ({ member, className }: Props) => {
     <>
       <Container name={name} className={className} onClick={handleContainerClick}>
         <Content>
-          <Photo>ここに写真</Photo>
+          <Photo>
+            <Image
+              src={src}
+              alt={'beni'}
+              width={1200}
+              height={1000}
+              style={{ width: '100%', height: 'auto', transition: '0.2s' }}
+            />
+          </Photo>
 
           <Description>
             {member.descriptions.map((description) => {
@@ -59,11 +73,10 @@ export const MemberCard = ({ member, className }: Props) => {
 }
 
 const Container = styled(Card)`
-  transition: 0.2s;
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.7;
+  &:hover img {
+    transform: scale(1.2);
   }
 `
 
@@ -75,9 +88,9 @@ const Content = styled.div`
 `
 
 const Photo = styled.div`
-  flex: 0 0 300px;
-  height: 200px;
-  background-color: ${BackgroundColor.Img};
+  display: flex;
+  border: 2px solid ${BorderColor.Card};
+  overflow: hidden;
 `
 
 const Description = styled.div`

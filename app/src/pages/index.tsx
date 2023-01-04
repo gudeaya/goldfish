@@ -167,7 +167,7 @@ const FirstViewContent = styled(Content)`
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(45deg, ${BackgroundColor.GradationLeft} 0%, ${BackgroundColor.GradationRight} 100%);
+  background-image: linear-gradient(45deg, ${BackgroundColor.FirstViewLeft} 0%, ${BackgroundColor.FirstViewRight} 100%);
 `
 
 const Title = styled.div`

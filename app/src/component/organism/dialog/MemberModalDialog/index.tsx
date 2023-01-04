@@ -21,8 +21,8 @@ export const MemberModalDialog = ({ isOpen, className, onClose }: Props) => {
             <Image
               src={'/member/sample.jpg'}
               alt={'sample'}
-              width={1599}
-              height={1066}
+              width={1200}
+              height={1000}
               style={{ width: '100%', height: 'auto' }}
             />
           </Content>

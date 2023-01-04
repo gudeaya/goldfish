@@ -11,24 +11,28 @@ export const MemberList = ({ className }: Props) => {
   const members = useMemo<Member[]>(() => {
     return [
       {
+        key: 'tsuno',
         name: 'つの',
         nicknames: ['つのの', 'ダイソン'],
         descriptions: ['一番大きくて、ご飯をダイソンのように吸い尽くす笑', '尾鰭に小さいツノのような出っ張りがある'],
         birthday: '2021年06月25日'
       },
       {
+        key: 'haku',
         name: 'はく',
         nicknames: ['はくた', '美人さん'],
         descriptions: ['ブクブクの泡を食べるのが大好きで、いつもモグモグしてる', '顔が美形で目が綺麗。とにかく美しい'],
         birthday: '2021年06月25日'
       },
       {
+        key: 'beni',
         name: 'べに',
         nicknames: ['べにに', 'ぷりり'],
         descriptions: ['泳ぎが下手で、いつも全身を使ってぷりぷり泳ぐ', 'みんなにちょっかいをだすヤンチャっ子'],
         birthday: '2021年06月25日'
       },
       {
+        key: 'kama',
         name: 'かま',
         nicknames: ['かまたん', 'ねぼすけ'],
         descriptions: [
@@ -38,12 +42,14 @@ export const MemberList = ({ className }: Props) => {
         birthday: '2022年06月26日'
       },
       {
+        key: 'maru',
         name: 'まる',
         nicknames: ['まるたん', 'ひげちゃん'],
         descriptions: ['一番スタイルが良く、フォルムが丸い', '口の周りが赤いので、夫に「髭生えとる笑」と揶揄われる'],
         birthday: '2022年06月26日'
       },
       {
+        key: 'mase',
         name: 'ませ',
         nicknames: ['ませたん', 'ませらー'],
         descriptions: [
@@ -58,14 +64,14 @@ export const MemberList = ({ className }: Props) => {
   return (
     <Container className={className}>
       {members.map((member) => {
-        return <MemberCard key={member.name} member={member} />
+        return <MemberCard key={member.key} member={member} />
       })}
     </Container>
   )
 }
 
 const Container = styled.div`
-  padding: 40px 0;
+  padding: 60px 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
