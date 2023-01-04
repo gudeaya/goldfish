@@ -1,5 +1,7 @@
-build:
+build.docker:
 	docker compose build
+build.next:
+	docker compose run --rm app npm run build
 
 run:
 	docker compose up
