@@ -7,24 +7,19 @@ import { ModalDialogPortal } from '~/component/molecule/portal/ModalDialogPortal
 
 interface Props {
   isOpen: boolean
+  src: string
   className?: string
   onClose: () => void
 }
 
-export const MemberModalDialog = ({ isOpen, className, onClose }: Props) => {
+export const MemberModalDialog = ({ isOpen, src, className, onClose }: Props) => {
   return (
     <ModalDialogPortal>
       <Fade isOpen={isOpen}>
         <Container className={className}>
           <Mask onClick={onClose} />
           <Content>
-            <Image
-              src={'/member/sample.jpg'}
-              alt={'sample'}
-              width={1200}
-              height={1000}
-              style={{ width: '100%', height: 'auto' }}
-            />
+            <Image src={src} alt={'sample'} width={1200} height={1000} style={{ width: '100%', height: 'auto' }} />
           </Content>
         </Container>
       </Fade>

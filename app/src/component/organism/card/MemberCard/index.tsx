@@ -67,7 +67,7 @@ export const MemberCard = ({ member, className }: Props) => {
         </Content>
       </Container>
 
-      <MemberModalDialog isOpen={isOpenModalDialog} onClose={handleCloseClick} />
+      <MemberModalDialog isOpen={isOpenModalDialog} src={src} onClose={handleCloseClick} />
     </>
   )
 }
