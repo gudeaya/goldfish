@@ -59,11 +59,3 @@ const Content = styled.div`
   background-color: ${BackgroundColor.Body};
   border-radius: 2px;
 `
-
-const Img = styled.div`
-  max-width: 100%;
-  width: auto;
-  padding: 20px;
-  background-color: ${BackgroundColor.Img};
-  border-radius: 2px;
-`
