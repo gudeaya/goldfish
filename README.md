@@ -5,7 +5,7 @@
 ### 環境構築
 
 ```
-make build
+make build.docker
 ```
 
 ### 起動
