@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>goldfish</title>
+        <title>Goldfish</title>
         <meta name={'viewport'} content={'width=device-width,initial-scale=1.0'} />
         <meta name={'description'} content={'我が家の金魚を紹介するだけのサイト'} />
         <link rel={'icon'} href={'/favicon.ico'} />
@@ -73,7 +73,11 @@ const Header = styled.header`
 `
 
 const Content = styled.article`
-  padding: 0 10%;
+  padding: 0 6%;
+
+  @media screen and (min-width: 1000px) {
+    padding: 0 10%;
+  }
 `
 
 const FirstViewContent = styled(Content)`

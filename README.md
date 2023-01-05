@@ -1,4 +1,4 @@
-# goldfish
+# Goldfish
 
 ## Local 開発
 
@@ -6,6 +6,10 @@
 
 ```
 make build.docker
+```
+
+```
+make package.ci
 ```
 
 ### 起動

@@ -71,13 +71,14 @@ export const MemberList = ({ className }: Props) => {
 }
 
 const Container = styled.div`
-  padding: 60px 0;
+  padding: 30px 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 
   @media screen and (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
+    padding: 60px 0;
   }
 
   @media screen and (min-width: 1000px) {
