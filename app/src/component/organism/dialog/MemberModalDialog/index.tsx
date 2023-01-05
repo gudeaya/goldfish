@@ -55,7 +55,11 @@ const Mask = styled.div`
 const Content = styled.div`
   max-width: 90vw;
   max-height: 90vh;
-  padding: 20px;
+  padding: 10px;
   background-color: ${BackgroundColor.Body};
   border-radius: 2px;
+
+  @media screen and (min-width: 800px) {
+    padding: 20px;
+  }
 `

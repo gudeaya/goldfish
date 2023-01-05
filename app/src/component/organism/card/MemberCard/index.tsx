@@ -75,8 +75,10 @@ export const MemberCard = ({ member, className }: Props) => {
 const Container = styled(Card)`
   cursor: pointer;
 
-  &:hover img {
-    transform: scale(1.2);
+  @media screen and (min-width: 1000px) {
+    &:hover img {
+      transform: scale(1.2);
+    }
   }
 `
 

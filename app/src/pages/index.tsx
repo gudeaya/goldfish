@@ -73,7 +73,11 @@ const Header = styled.header`
 `
 
 const Content = styled.article`
-  padding: 0 10%;
+  padding: 0 6%;
+
+  @media screen and (min-width: 1000px) {
+    padding: 0 10%;
+  }
 `
 
 const FirstViewContent = styled(Content)`
