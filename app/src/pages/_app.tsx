@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
+import { Analytics } from '@vercel/analytics/react'
 
 import { BackgroundColor, FontSize, TextColor } from '~/token'
 
@@ -8,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Component {...pageProps} />
+      <Analytics />
     </>
   )
 }
